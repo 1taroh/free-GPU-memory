@@ -5,7 +5,8 @@ import subprocess
 class MLP(nn.Module):
     def __init__(self):
         super().__init__()
-        self.linear1 = nn.Linear(40000,40000)
+        self.linear1 = nn.Linear(20000,20000)
+        self.linear2 = nn.Linear(20000,20000)
 
 def print_GPU_usage():
     result = subprocess.run(['nvidia-smi'], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
@@ -17,6 +18,7 @@ def print_GPU_usage():
 
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 model = MLP()
+# linear2 = model.linear2 # modelをdelしてもmodelに関係するオブジェクトが存在する場合には，その分のメモリを解放できない
 
 print("Before transfering the model")
 print_GPU_usage()
