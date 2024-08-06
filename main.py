@@ -1,7 +1,6 @@
 import torch
 import torch.nn as nn
 import subprocess
-import time
 
 class MLP(nn.Module):
     def __init__(self):
