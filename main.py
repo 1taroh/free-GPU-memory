@@ -27,6 +27,9 @@ print("The model transferred to GPU.")
 print_GPU_usage()
 
 del model
+print("The model was deleted.")
+print_GPU_usage()
+
 torch.cuda.empty_cache()
-print("Them model was deleted.")
+print("Freed GPU memory.")
 print_GPU_usage()
