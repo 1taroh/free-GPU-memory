@@ -5,9 +5,7 @@ pytorchでGPUに転送したモデルをどうにかして削除し，メモリ�
 ```
 python -m venv venv
 .\venv\Scripts\activate
-pip install torch==2.3.0 torchvision --index-url https://download.pytorch.org/whl/cu118
-pip install ipykernel
-ipython kernel install --user --name=venv
+pip install torch==2.3.0 --index-url https://download.pytorch.org/whl/cu118
 ```
 
 ## 使用方法
